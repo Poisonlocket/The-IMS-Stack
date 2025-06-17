@@ -3,6 +3,7 @@ import "../assets/app.css"
 const title = "404 - Page Not Found";
 
 ---
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -10,4 +11,18 @@ const title = "404 - Page Not Found";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 </head>
-<div>fff</div>
+<body class="font-blogfont min-h-screen bg-base-100 flex items-center">
+    <main class="max-w-2xl mx-auto text-center px-4">
+        <h1 class="text-9xl font-bold text-primary mb-4">404</h1>
+        <p class="text-xl font-semibold text-base-content mb-8">
+            Oops! Die Seite konnte nicht gefunden werden.
+        </p>
+        <button 
+            onclick="window.history.back()"
+            class="btn btn-primary font-medium px-6 py-3 text-lg"
+        >
+            Zurück zur vorherigen Seite
+        </button>
+    </main>
+</body>
+</html>
