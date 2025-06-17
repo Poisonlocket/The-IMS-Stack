@@ -1,4 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-    themes: nord --default, night --prefersdark
+    themes: nord --default
+}
+
+
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-blogfont {
+    font-family: 'JetBrains Mono', sans-serif;
 }

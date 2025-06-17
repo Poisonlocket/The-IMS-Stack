@@ -1,7 +1,9 @@
 ---
 import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
+import Landing_hero from "../components/landing_hero.astro";
 ---
+
 
 <html lang="en">
 	<head>
@@ -11,7 +13,8 @@ import Landing_nav from "../components/landing_nav.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<Landing_nav />
+	<body class='font-blogfont'>
+	<Landing_nav />
+	<Landing_hero />
 	</body>
 </html>
