@@ -1,5 +1,5 @@
 import {defineCollection, z} from "astro:content";
-import {glob} from "astro/loaders";
+import {glob, file} from "astro/loaders";
 
 
 const posts = defineCollection({
@@ -16,4 +16,18 @@ const posts = defineCollection({
     })
 });
 
-export const collections = {posts};
+const authors = defineCollection({
+    loader: file("./authors.json"),
+    schema: z.object({
+        name: z.string().max(50),
+        username: z.string().max(50),
+        description: z.string().max(200),
+        articles: z.array(z.string()),
+        tags: z.array(z.string()),
+        github: z.string().max(200),
+        website: z.string().max(200),
+        profile_image: z.string().max(200),
+    })
+})
+
+export const collections = {posts, authors};
