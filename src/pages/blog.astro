@@ -1,10 +1,26 @@
 ---
-import { ClientRouter } from "astro:transitions";
+import { getCollection } from "astro:content"  // Note the colon after astro
 import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
 import Root_layout from "../layouts/root_layout.astro";
----
-<Root_layout  title='About' >
- <Landing_nav  />
+import Blog_prev_card from "../components/blog_prev_card.astro";
 
+const posts = await getCollection("posts");
+const sortedPosts = posts.sort((a, b) => {
+ return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+console.log(sortedPosts[0].data.authors.join(", "))
+---
+
+<Root_layout title='About'>
+ <Landing_nav />
+ <div class='h-96'>
+  <Blog_prev_card
+      image_path='/src/assets/author_images/author_image_lorenzo_bonometti.jpg'
+      title={sortedPosts[0].data.title}
+      description={sortedPosts[0].data.description}
+      read_time={sortedPosts[0].data.reading}
+      authors={sortedPosts[0].data.authors.join(", ")}
+  />
+ </div>
 </Root_layout>
