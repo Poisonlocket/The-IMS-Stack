@@ -2,6 +2,11 @@
 import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
 import Landing_hero from "../components/landing_hero.astro";
+
+import {getCollection} from "astro:content"
+
+let result = await getCollection("posts");
+console.log(result);
 ---
 
 

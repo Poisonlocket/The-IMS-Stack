@@ -1,0 +1,43 @@
+[
+  {
+    "Name": "Alice Johnson",
+    "Description": "Full-stack developer with a passion for open-source technologies and building scalable web applications. Enjoys working with JavaScript, Python, and cloud infrastructure.",
+    "Articles": [
+      "Building Scalable APIs with Node.js",
+      "A Guide to React Hooks",
+      "Deploying on AWS: Best Practices"
+    ],
+    "Username": "alicej",
+    "Tags": ["JavaScript", "React", "AWS", "Open Source"],
+    "Github Link": "https://github.com/alicej",
+    "Website": "https://alicejohnson.dev",
+    "Profile Image Path": "/images/profiles/alicej.png"
+  },
+  {
+    "Name": "Brian Kim",
+    "Description": "DevOps engineer and automation enthusiast focused on CI/CD pipelines, container orchestration, and infrastructure as code. Frequent contributor to Kubernetes-related projects.",
+    "Articles": [
+      "Docker vs Podman: What's the Difference?",
+      "Terraform Modules: Reusability Made Easy"
+    ],
+    "Username": "briankim",
+    "Tags": ["DevOps", "Kubernetes", "CI/CD", "Terraform"],
+    "Github Link": "https://github.com/briankim",
+    "Website": "https://briankim.io",
+    "Profile Image Path": "/images/profiles/briankim.jpg"
+  },
+  {
+    "Name": "Clara Martinez",
+    "Description": "Data scientist with expertise in machine learning, natural language processing, and data visualization. Advocates for ethical AI and inclusive data practices.",
+    "Articles": [
+      "Bias in AI: Identifying and Mitigating",
+      "Exploring NLP with spaCy and HuggingFace",
+      "Visualizing Big Data with Plotly"
+    ],
+    "Username": "claram",
+    "Tags": ["Data Science", "NLP", "Ethical AI", "Python"],
+    "Github Link": "https://github.com/claramartinez",
+    "Website": "https://claramartinez.ai",
+    "Profile Image Path": "default-profile.png"
+  }
+]
