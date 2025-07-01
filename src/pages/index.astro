@@ -4,6 +4,7 @@ import Landing_nav from "../components/landing_nav.astro";
 import Landing_hero from "../components/landing_hero.astro";
 
 import {getCollection, getEntry} from "astro:content"
+import Root_layout from "../layouts/root_layout.astro";
 
 let posts = await getCollection("posts");
 console.log(posts);
@@ -11,22 +12,15 @@ console.log(posts);
 let authors = await getCollection("authors");
 console.log(authors);
 
-let author = await getEntry("authors", "alex-johnson")
+let author = await getEntry("authors", "lorenzo-bonometti")
 console.log(author);
 
 ---
 
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class='font-blogfont'>
-	<Landing_nav  />
+<Root_layout title='The IMS Stack'>
+	<Landing_nav   />
+
 	<Landing_hero />
-	</body>
-</html>
+</Root_layout>
+

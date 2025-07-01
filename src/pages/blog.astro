@@ -2,7 +2,9 @@
 import { ClientRouter } from "astro:transitions";
 import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
+import Root_layout from "../layouts/root_layout.astro";
 ---
-<>
- <Landing_nav trans />
-</>
+<Root_layout  title='About' >
+ <Landing_nav  />
+
+</Root_layout>

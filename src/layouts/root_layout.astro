@@ -1,5 +1,11 @@
 ---
 import {ClientRouter} from "astro:transitions";
+
+interface props {
+  title: string
+}
+
+const title = Astro.props.title || "Astro";
 ---
 <html lang="en">
 <head>
@@ -7,9 +13,10 @@ import {ClientRouter} from "astro:transitions";
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-  <title>Astro</title>
+  <title>{title}</title>
   <ClientRouter></ClientRouter>
+
 </head>
 <div class='font-blogfont'>
-
+  <slot />
 </div>

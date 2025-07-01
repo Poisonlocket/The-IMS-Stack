@@ -2,12 +2,10 @@
 import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
 import Landing_hero from "../components/landing_hero.astro";
+import Root_layout from "../layouts/root_layout.astro";
 
 ---
-<>
- <Landing_nav />
- <div class='h-96 bg-base-200 flex items-center justify-center'>
-   <h1 class='text-5xl font-bold'>The Stack</h1>
+<Root_layout title='About'>
+    <Landing_nav  />
 
-</div>
- </>
+</Root_layout>
