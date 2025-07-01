@@ -1,43 +1,43 @@
 [
   {
-    "Name": "Alice Johnson",
-    "Description": "Full-stack developer with a passion for open-source technologies and building scalable web applications. Enjoys working with JavaScript, Python, and cloud infrastructure.",
-    "Articles": [
-      "Building Scalable APIs with Node.js",
-      "A Guide to React Hooks",
-      "Deploying on AWS: Best Practices"
+    "name": "Alice Johnson",
+    "username": "alicej",
+    "description": "Full-stack developer passionate about clean code, cloud infrastructure, and teaching others through technical writing.",
+    "articles": [
+      "getting-started-with-react",
+      "building-scalable-apis",
+      "intro-to-astro"
     ],
-    "Username": "alicej",
-    "Tags": ["JavaScript", "React", "AWS", "Open Source"],
-    "Github Link": "https://github.com/alicej",
-    "Website": "https://alicejohnson.dev",
-    "Profile Image Path": "/images/profiles/alicej.png"
+    "tags": ["JavaScript", "React", "Node.js", "AWS"],
+    "github": "https://github.com/alicej",
+    "website": "https://alicejohnson.dev",
+    "profile_image": "/images/profiles/alicej.jpg"
   },
   {
-    "Name": "Brian Kim",
-    "Description": "DevOps engineer and automation enthusiast focused on CI/CD pipelines, container orchestration, and infrastructure as code. Frequent contributor to Kubernetes-related projects.",
-    "Articles": [
-      "Docker vs Podman: What's the Difference?",
-      "Terraform Modules: Reusability Made Easy"
+    "name": "Brian Kim",
+    "username": "briankim",
+    "description": "DevOps engineer focused on CI/CD automation, containerization, and scalable cloud deployments using Kubernetes and Terraform.",
+    "articles": [
+      "kubernetes-for-beginners",
+      "terraform-modules-guide"
     ],
-    "Username": "briankim",
-    "Tags": ["DevOps", "Kubernetes", "CI/CD", "Terraform"],
-    "Github Link": "https://github.com/briankim",
-    "Website": "https://briankim.io",
-    "Profile Image Path": "/images/profiles/briankim.jpg"
+    "tags": ["DevOps", "Terraform", "Kubernetes", "CI/CD"],
+    "github": "https://github.com/briankim",
+    "website": "https://briankim.io",
+    "profile_image": "/images/profiles/briankim.png"
   },
   {
-    "Name": "Clara Martinez",
-    "Description": "Data scientist with expertise in machine learning, natural language processing, and data visualization. Advocates for ethical AI and inclusive data practices.",
-    "Articles": [
-      "Bias in AI: Identifying and Mitigating",
-      "Exploring NLP with spaCy and HuggingFace",
-      "Visualizing Big Data with Plotly"
+    "name": "Clara Martinez",
+    "username": "claram",
+    "description": "Data scientist working at the intersection of machine learning, natural language processing, and ethical AI practices.",
+    "articles": [
+      "bias-in-machine-learning",
+      "getting-started-with-nlp",
+      "data-visualization-tools"
     ],
-    "Username": "claram",
-    "Tags": ["Data Science", "NLP", "Ethical AI", "Python"],
-    "Github Link": "https://github.com/claramartinez",
-    "Website": "https://claramartinez.ai",
-    "Profile Image Path": "default-profile.png"
+    "tags": ["Data Science", "Python", "NLP", "Ethical AI"],
+    "github": "https://github.com/claramartinez",
+    "website": "https://claramartinez.ai",
+    "profile_image": "/images/profiles/claramartinez.jpg"
   }
 ]
