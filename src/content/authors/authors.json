@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "alex-johnson",
+    "name": "Alex Johnson",
+    "username": "alexj",
+    "description": "Full-stack developer and open-source enthusiast. Loves building web apps and exploring new tech.",
+    "articles": [
+      "how-to-build-a-blog",
+      "introduction-to-astro",
+      "advanced-typescript-patterns"
+    ],
+    "tags": ["javascript", "webdev", "opensource"],
+    "github": "https://github.com/alexj",
+    "website": "https://alexjohnson.dev",
+    "profile_image": "https://example.com/images/alexj.jpg"
+  },
+  {
+    "slug": "john-johnson",
+    "name": "Alex Johnson",
+    "username": "alexj",
+    "description": "Full-stack developer and open-source enthusiast. Loves building web apps and exploring new tech.",
+    "articles": [
+      "how-to-build-a-blog",
+      "introduction-to-astro",
+      "advanced-typescript-patterns"
+    ],
+    "tags": ["javascript", "webdev", "opensource"],
+    "github": "https://github.com/alexj",
+    "website": "https://alexjohnson.dev",
+    "profile_image": "https://example.com/images/alexj.jpg"
+  }
+]
