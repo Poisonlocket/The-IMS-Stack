@@ -3,13 +3,16 @@ import "../assets/app.css"
 import Landing_nav from "../components/landing_nav.astro";
 import Landing_hero from "../components/landing_hero.astro";
 
-import {getCollection} from "astro:content"
+import {getCollection, getEntry} from "astro:content"
 
 let posts = await getCollection("posts");
 console.log(posts);
 
 let authors = await getCollection("authors");
 console.log(authors);
+
+let author = await getEntry("authors", "alex-johnson")
+console.log(author);
 ---
 
 
