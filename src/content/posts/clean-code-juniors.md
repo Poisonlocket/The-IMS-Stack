@@ -1,12 +1,12 @@
 ---
-slug: "clean-code-juniors"
+id: "clean-code-juniors"
 title: "Clean Code für Juniors erklärt"
 description: "Ein kompakter Einstieg für angehende Entwickler:innen, um sauberen Code zu schreiben und technische Schulden zu vermeiden."
 authors: ["Victor Pesci", "Lorenzo Bonometti"]
 reading: 5
 topicTags: ["Clean Code", "Best Practices", "Development"]
 date: "2025-06-15"
-relatedArticles: ["refactoring-101.md", "legacy-code-verstehen.md"]
+relatedPosts: ["refactoring-101.md", "legacy-code-verstehen.md"]
 previewImagePath: "/images/blog/clean-code.jpg"
 ---
 

@@ -1,12 +1,12 @@
 ---
-slug: "remote-teams-psychologie"
+id: "remote-teams-psychologie"
 title: "Psychologie in Remote-Teams"
 description: "Remote-Arbeit ist mehr als Zoom und Slack – sie braucht Empathie, Struktur und klare Kommunikation."
 authors: ["Victor Pesci", "Lorenzo Bonometti"]
 reading: 7
 topicTags: ["Remote Work", "Teamführung", "Psychologie", "Collaboration"]
 date: "2025-06-05"
-relatedArticles: ["async-work.md", "digital-rituale.md"]
+relatedPosts: ["async-work.md", "digital-rituale.md"]
 previewImagePath: "/images/blog/remote-psych.jpg"
 ---
 

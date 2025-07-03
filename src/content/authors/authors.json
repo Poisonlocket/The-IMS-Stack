@@ -4,7 +4,7 @@
     "name": "Lorenzo Bonometti",
     "username": "Poisonlocket",
     "description": "Code, Koffein, Entli und Successful CI runs sind s'wahre Glück im Lebe",
-    "articles": [
+    "posts": [
 
     ],
     "tags": ["golang", "webdev", "opensource", "python", "homelabbing", "devops", "typescript", "linux"],
@@ -17,7 +17,7 @@
     "name": "Victor Pesci",
     "username": "omen",
     "description": "i like it when the iron does the oxidation",
-    "articles": [
+    "posts": [
 
     ],
     "tags": ["javascript", "rust", "opensource",  "python",  "webdevelopment",  "IMS", "Lehrpersone", "rant",  "BZZ", "bevy"],
