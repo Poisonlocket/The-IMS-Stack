@@ -1,0 +1,36 @@
+---
+import { getEntry, getCollection, render } from 'astro:content';
+import Root_layout from "../../layouts/root_layout.astro";
+import Landing_nav from "../../components/landing_nav.astro";
+import "../../assets/app.css"
+
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { slug: post.id },
+  }));
+}
+
+
+
+const { slug } = Astro.params;  // Das geht hier, im normalen Script-Block
+
+// Jetzt kannst du z.B. einen Eintrag mit dem Slug laden:
+const post = await getEntry('posts', slug);
+
+const { Content} = await render(post)
+---
+
+<Root_layout>
+  <Landing_nav />
+  <article>
+    <h1 class='bg-base-200'>{post.data.title}</h1>
+    <p>{post.data.description}</p>
+  </article>
+  <br />
+  <div class="content mx-20 flex text-justify ">
+    <Content />
+  </div>
+</Root_layout>
+

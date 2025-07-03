@@ -1,4 +1,5 @@
 ---
+slug: "clean-code-juniors"
 title: "Clean Code für Juniors erklärt"
 description: "Ein kompakter Einstieg für angehende Entwickler:innen, um sauberen Code zu schreiben und technische Schulden zu vermeiden."
 authors: ["Victor Pesci", "Lorenzo Bonometti"]
