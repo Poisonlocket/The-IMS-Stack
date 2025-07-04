@@ -1,6 +1,8 @@
 
 ---
 import { Image } from "astro:assets";
+import {getAuthorSlugSingle} from "../util/get_author_slug";
+import Author_post_preview from "./author_post_preview.astro";
 
 interface props {
     id: string
@@ -8,7 +10,7 @@ interface props {
     description: string
     image_path: string
     read_time: number
-    authors: string
+    authors: string[]
     width: string
 }
 
@@ -31,8 +33,12 @@ const { id, title, description, image_path, read_time, authors, width = "w-96" }
     </figure>
     <div class="card-body ">
         <h2 class="card-title">{title}</h2>
-        <div class='text-xs text-secondary'>Lesezeit:  {read_time} Minuten - {authors} </div>
-        <p>{description}</p>
+      <span>Lesezeit: {read_time} Minuten -</span>
+        <div class="ml-2 flex flex-wrap">
+            {authors.map(author => (
+                <Author_post_preview id={getAuthorSlugSingle(author)} />
+            ))}
+      </div>        <p>{description}</p>
         <div class="card-actions justify-end">
             <button class="btn btn-primary mt-1"><a href=`/post/${id}`>Jetzt reinlesen</a></button>
         </div>

@@ -1,0 +1,30 @@
+---
+import "../../assets/app.css";
+import { getCollection } from "astro:content";
+import Landing_nav from "../../components/landing_nav.astro";
+import Author_hero from "../../components/Author_hero.astro";
+import Root_layout from "../../layouts/root_layout.astro";
+
+export async function getStaticPaths() {
+    const authors = await getCollection('authors');
+    return authors.map(author => ({
+        params: { slug: author.id },
+    }));
+}
+
+const { slug } = Astro.params;
+
+const authors = await getCollection('authors');
+const author = authors.find(a => a.id === Astro.params.slug);
+
+if (!author) {
+    throw new Error(`Author with slug "${Astro.params.slug}" not found.`);
+}
+console.log(slug)
+
+---
+
+<Root_layout>
+  <Landing_nav />
+  <Author_hero id={slug} />
+</Root_layout>

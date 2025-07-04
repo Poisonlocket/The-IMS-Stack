@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 
 
-const { slug } = Astro.params;  // Das geht hier, im normalen Script-Block
+const { slug } : string | undefined = Astro.params;  // Das geht hier, im normalen Script-Block
 
 // Jetzt kannst du z.B. einen Eintrag mit dem Slug laden:
 const post = await getEntry('posts', slug);
