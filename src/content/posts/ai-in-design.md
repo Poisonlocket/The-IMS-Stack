@@ -93,3 +93,4 @@ As AI becomes more powerful, the role of design becomes more critical. It's not 
 We are not just designing machines. We are designing the future.
 
 ---
+![image](/src/assets/author_images/author_image_lorenzo_bonometti.jpg)

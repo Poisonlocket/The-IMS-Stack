@@ -10,7 +10,7 @@
     "tags": ["golang", "webdev", "opensource", "python", "homelabbing", "devops", "typescript", "linux"],
     "github": "https://github.com/Poisonlocket",
     "website": "https://bonomettil.dev",
-    "profile_image": "../../images/authors/lorenzo-bonometti.jpg"
+    "profile_image": "/src/assets/author_images/author_image_lorenzo_bonometti.jpg"
   },
   {
     "slug": "victor-pesci",
@@ -23,6 +23,6 @@
     "tags": ["javascript", "rust", "opensource",  "python",  "webdevelopment",  "IMS", "Lehrpersone", "rant",  "BZZ", "bevy"],
     "github": "https://github.com/old0men",
     "website": "https://ims-portfolio-vast.vercel.app/",
-    "profile_image": "../../images/authors/victor-pesci.jpg"
+    "profile_image": "/src/assets/author_images/author_image_victor_pesci.png"
   }
 ]
