@@ -15,18 +15,18 @@
     "profile_image": "https://example.com/images/alexj.jpg"
   },
   {
-    "slug": "john-johnson",
-    "name": "Alex Johnson",
-    "username": "alexj",
-    "description": "Full-stack developer and open-source enthusiast. Loves building web apps and exploring new tech.",
+    "slug": "victor-pesci",
+    "name": "Victor Pesci",
+    "username": "omen",
+    "description": "i go suck dick",
     "articles": [
-      "how-to-build-a-blog",
-      "introduction-to-astro",
-      "advanced-typescript-patterns"
+      "Herr Müller rant",
+      "Particle Simulator journey",
+      "Probst fanfic"
     ],
     "tags": ["javascript", "webdev", "opensource"],
-    "github": "https://github.com/alexj",
-    "website": "https://alexjohnson.dev",
-    "profile_image": "https://example.com/images/alexj.jpg"
+    "github": "https://github.com/old0men",
+    "website": "https://ims-portfolio-vast.vercel.app/",
+    "profile_image": "go/suck/dick.jpeg"
   }
 ]
