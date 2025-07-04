@@ -34,20 +34,21 @@ console.log(getAuthorSlugAll(postdata.post.data.authors))
     <div class='flex items-center justify-center'>
       <img alt="alt" class='rounded-md w-full max-w-3xl h-auto' src={postdata.post.data.previewImagePath} />
     </div>
-    <article>
+
+    <article class='mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8'>
       <h1 class='bg-base-200 xl:text-3xl sm:text-2xl font-semibold mt-8'>{postdata.post.data.title}</h1>
       <div class='flex items-center mt-2 text-sm text-secondary'>
         <span>Lesezeit: {postdata.post.data.reading} Minuten -</span>
         <div class="ml-2 flex flex-wrap">
-            {postdata.post.data.authors.map(author => (
+          {postdata.post.data.authors.map(author => (
               <Author_post_preview id={getAuthorSlugSingle(author)} />
-            ))}
+          ))}
         </div>
       </div>
       <p class='text-secondary mt-4 text-base sm:text-lg'>{postdata.post.data.description}</p>
     </article>
-    <br />
     <div class="content flex flex-col text-justify markdown-content">
+
       <slot />
     </div>
   </div>

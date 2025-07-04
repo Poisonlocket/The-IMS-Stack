@@ -25,19 +25,19 @@
 }
 
 .markdown-content {
-    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8;
 }
 
 .markdown-content h1 {
-    @apply text-3xl sm:text-3xl lg:text-5xl xl:text-5xl font-bold text-primary mt-6;
+    @apply text-3xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold text-primary mt-6;
 }
 
 .markdown-content h2 {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mt-5;
+    @apply text-2xl sm:text-sm lg:text-xl font-bold text-primary mt-5;
 }
 
 .markdown-content h3 {
-    @apply text-xl sm:text-2xl lg:text-3xl font-semibold text-primary mt-4;
+    @apply text-xl sm:text-lg lg:text-xl font-semibold text-primary mt-4;
 }
 
 .markdown-content p {

@@ -14,5 +14,5 @@ console.log(authordata.data.profile_image)
 ---
 <div class='flex items-center hover:underline'>
   <img src={authordata.data.profile_image} alt='Author Image' class='rounded-full w-5 h-5 mr-1' />
-  <div class='text-sm mr-3 text-secondary '>{authordata.data.name + ","}</div>
+  <div class='text-sm mr-3 text-secondary flex-nowrap '><a href=`/author/${authordata.id}`>{authordata.data.name + ","}</a></div>
 </div>
