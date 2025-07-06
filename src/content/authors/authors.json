@@ -3,9 +3,9 @@
     "slug": "lorenzo-bonometti",
     "name": "Lorenzo Bonometti",
     "username": "Poisonlocket",
-    "description": "Code, Koffein, Entli und Successful CI runs sind s'wahre Glück im Lebe",
+    "description": "Code, Koffein, Entli und Successful CI runs sind s'wahre Glück im Lebe. I minere Freiziit programmiere ich unter anderem gern Go und Typescript, aber au viel Python. Ich bin immer ah öppis dranne und am ume tüftle, mängisch gibi au mini Meinig zu Themene uf dem Blog ab.",
     "posts": [
-
+      "ai-in-design"
     ],
     "tags": ["golang", "webdev", "opensource", "python", "homelabbing", "devops", "typescript", "linux"],
     "github": "https://github.com/Poisonlocket",

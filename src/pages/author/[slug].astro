@@ -4,27 +4,56 @@ import { getCollection } from "astro:content";
 import Landing_nav from "../../components/landing_nav.astro";
 import Author_hero from "../../components/Author_hero.astro";
 import Root_layout from "../../layouts/root_layout.astro";
+import Blog_prev_card from "../../components/Blog_prev_card.astro";
+import { getAuthorSlugSingle } from "../../util/get_author_slug";
 
 export async function getStaticPaths() {
-    const authors = await getCollection('authors');
-    return authors.map(author => ({
-        params: { slug: author.id },
-    }));
+  const authors = await getCollection('authors');
+  return authors.map(author => ({
+    params: { slug: getAuthorSlugSingle(author.data.name) },
+  }));
 }
 
 const { slug } = Astro.params;
 
+// Fetch all authors and find the current author by slug
 const authors = await getCollection('authors');
-const author = authors.find(a => a.id === Astro.params.slug);
-
+const author = authors.find(a => getAuthorSlugSingle(a.data.name) === slug);
 if (!author) {
-    throw new Error(`Author with slug "${Astro.params.slug}" not found.`);
+  throw new Error(`Author with slug "${slug}" not found.`);
 }
-console.log(slug)
 
+// Fetch all blog posts and filter by the current author's slug
+const posts = await getCollection('posts');
+const authorPosts = posts
+    .filter(post => post.data.authors.includes(author.data.name))
+    .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 ---
 
 <Root_layout>
   <Landing_nav />
   <Author_hero id={slug} />
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6">Beiträge von {author.data.name}</h2>
+    {authorPosts.length === 0 ? (
+        <p class="text-gray-600">Keine Beiträge vorhanden.</p>
+    ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {authorPosts.map(post => (
+              <div class="w-full">
+                <Blog_prev_card
+                    image_path={post.data.previewImagePath}
+                    id={post.id}
+                    title={post.data.title}
+                    description={post.data.description}
+                    read_time={post.data.reading}
+                    authors={post.data.authors}
+                    width="w-full"
+                />
+              </div>
+          ))}
+        </div>
+    )}
+  </section>
 </Root_layout>

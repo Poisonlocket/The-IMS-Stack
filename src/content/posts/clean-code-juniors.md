@@ -7,7 +7,7 @@ reading: 5
 topicTags: ["Clean Code", "Best Practices", "Development"]
 date: "2025-06-15"
 relatedPosts: ["refactoring-101.md", "legacy-code-verstehen.md"]
-previewImagePath: "/images/blog/clean-code.jpg"
+previewImagePath: "/src/assets/blogpost_images/img.png"
 ---
 
 Sauberer Code ist kein Luxus – er ist essenziell für nachhaltige Softwareentwicklung. In diesem Artikel zeigen wir, worauf Juniors achten sollten, um guten Stil zu entwickeln: sprechende Variablennamen, kleine Funktionen, keine Magie. Bonus: ein Mini-Cheat Sheet für dein nächstes Projekt!

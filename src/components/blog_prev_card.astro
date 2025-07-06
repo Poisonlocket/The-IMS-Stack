@@ -13,7 +13,8 @@ interface props {
     width: string
 }
 
-const { id, title, description, image_path, read_time, authors, width = "w-96" } = Astro.props;
+const { id, title, description, image_path, read_time, authors, width = "w-96" } = Astro.props as props;
+
 ---
 
 <div class={`card bg-base-100 ${width} shadow-sm sm:w-full md:w-80 lg:w-96`}>
