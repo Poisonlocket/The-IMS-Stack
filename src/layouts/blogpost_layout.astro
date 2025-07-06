@@ -5,6 +5,7 @@ import Landing_nav from "../components/landing_nav.astro";
 import {Image} from "astro:assets";
 import Author_post_preview from "../components/author_post_preview.astro";
 import {getAuthorSlugSingle, getAuthorSlugAll} from "../util/get_author_slug";
+import { Calendar } from "@lucide/astro";
 interface Postdata {
     post: {
         id:string
@@ -44,6 +45,7 @@ console.log(getAuthorSlugAll(postdata.post.data.authors))
               <Author_post_preview id={getAuthorSlugSingle(author)} />
           ))}
         </div>
+        <span class='flex'>- <Calendar class='ml-2 mr-2' size={18} />{postdata.post.data.date.replaceAll("-", ".")}</span>
       </div>
       <p class='text-secondary mt-4 text-base sm:text-lg'>{postdata.post.data.description}</p>
     </article>
