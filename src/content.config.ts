@@ -17,6 +17,14 @@ const posts = defineCollection({
     })
 });
 
+const tags = defineCollection({
+    loader: file("src/content/tags/tags.json"),
+    schema: z.object({
+        name: z.string(),
+        slug: z.string()
+    })
+})
+
 const authors = defineCollection({
     loader: file("src/content/authors/authors.json"),
     schema: z.object({
@@ -33,4 +41,4 @@ const authors = defineCollection({
     })
 })
 
-export const collections = {posts, authors};
+export const collections = {posts, authors, tags};
