@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import Root_layout from '../../layouts/root_layout.astro';
+import Landing_nav from "../../components/landing_nav.astro";
+import Blog_prev_card from "../../components/Blog_prev_card.astro";
+import "../../assets/app.css";
+
+// Get the slug from the route parameters
+const { slug } = Astro.params;
+
+// Fetch all posts and filter by the current tag
+const posts = await getCollection('posts');
+const filteredPosts = posts.filter(post => post.data.tags?.includes(slug));
+
+// Generate static paths for all tags
+export async function getStaticPaths() {
+    const tags = await getCollection('tags');
+    return tags.map(tag => ({
+        params: { slug: tag.id },
+    }));
+}
+---
+
+<Root_layout>
+  <Landing_nav />
+  <div class="w-full bg-base-200 h-1"></div>
+  <section class="max-w-7xl bg-base-200 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6">Posts tagged with "{slug}"</h2>
+      {filteredPosts.length === 0 ? (
+        <p class="text-gray-600">No posts available for this tag.</p>
+      ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map(post => (
+              <div class="w-full">
+                <Blog_prev_card
+                  image_path={post.data.previewImagePath}
+                  id={post.id}
+                  title={post.data.title}
+                  description={post.data.description}
+                  read_time={post.data.reading}
+                  authors={post.data.authors}
+                  width="w-full"
+                />
+              </div>
+            ))}
+        </div>
+      )}
+  </section>
+</Root_layout>

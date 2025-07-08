@@ -4,7 +4,7 @@ title: "Clean Code für Juniors erklärt"
 description: "Ein kompakter Einstieg für angehende Entwickler:innen, um sauberen Code zu schreiben und technische Schulden zu vermeiden."
 authors: ["Victor Pesci", "Lorenzo Bonometti"]
 reading: 5
-topicTags: ["Clean Code", "Best Practices", "Development"]
+tags: [ "golang", "javascript"]
 date: "2025-06-15"
 relatedPosts: ["refactoring-101.md", "legacy-code-verstehen.md"]
 previewImagePath: "/src/assets/blogpost_images/img.png"

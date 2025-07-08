@@ -5,7 +5,9 @@ import Landing_nav from "../components/landing_nav.astro";
 import {Image} from "astro:assets";
 import Author_post_preview from "../components/author_post_preview.astro";
 import {getAuthorSlugSingle, getAuthorSlugAll} from "../util/get_author_slug";
-import { Calendar } from "@lucide/astro";
+
+import tagcloud from "../components/tagcloud.astro";
+import Tagcloud from "../components/tagcloud.astro";
 interface Postdata {
     post: {
         id:string
@@ -15,7 +17,7 @@ interface Postdata {
             reading: string;
             authors: string[];
             related_posts: string[];
-            topicTags: string[];
+            tags: string[];
             date: string;
             previewImagePath: string;
         };
@@ -38,15 +40,20 @@ console.log(getAuthorSlugAll(postdata.post.data.authors))
 
     <article class='mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8'>
       <h1 class='bg-base-200 xl:text-3xl sm:text-2xl font-semibold mt-8'>{postdata.post.data.title}</h1>
-      <div class='flex items-center mt-2 text-sm text-secondary'>
+      <div class='flex md:flex-row items-center mt-2 text-sm xs:flex-col text-secondary'>
         <span>Lesezeit: {postdata.post.data.reading} Minuten -</span>
-        <div class="ml-2 flex flex-wrap">
+        <div class="ml-2 xs:mt-1 md:mt-0 flex flex-wrap">
           {postdata.post.data.authors.map(author => (
               <Author_post_preview id={getAuthorSlugSingle(author)} />
           ))}
         </div>
-        <span class='flex'>- <Calendar class='ml-2 mr-2' size={18} />{postdata.post.data.date.replaceAll("-", ".")}</span>
+        <span class='flex xs:mt-1 md:mt-0'>- {postdata.post.data.date.replaceAll("-", ".")}</span>
       </div>
+      <div class='flex flex-row'>{postdata.post.data.tags.map((tag) => (
+          <Tagcloud class='' tag={tag}>
+
+          </Tagcloud>
+      ))}</div>
       <p class='text-secondary mt-4 text-base sm:text-lg'>{postdata.post.data.description}</p>
     </article>
     <div class="content flex flex-col text-justify markdown-content">

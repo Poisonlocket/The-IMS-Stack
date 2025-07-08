@@ -4,7 +4,7 @@ title: "AI im Design: Chance oder Risiko?"
 description: "Wie künstliche Intelligenz den Designprozess beeinflusst und welche ethischen Fragen sich daraus ergeben."
 authors: ["Victor Pesci", "Lorenzo Bonometti"]
 reading: 6
-topicTags: ["AI", "Design", "Ethik", "UX"]
+tags: ["golang", "javascript"]
 date: "2025-06-27"
 relatedPosts: ["ux-zukunft.md", "ethik-ai.md"]
 previewImagePath: "/src/assets/author_images/author_image_lorenzo_bonometti.jpg"

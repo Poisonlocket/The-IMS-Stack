@@ -10,20 +10,14 @@ const posts = defineCollection({
         description: z.string().max(200),
         authors: z.array(z.string().max(30)),
         reading: z.number().int(),
-        topicTags: z.array(z.string()),
+        tags: z.array(z.string()),
         date: z.string(), // or z.date() if you want native Date parsing
         relatedPosts: z.array(z.string()),
         previewImagePath: z.string()
     })
 });
 
-const tags = defineCollection({
-    loader: file("src/content/tags/tags.json"),
-    schema: z.object({
-        name: z.string(),
-        slug: z.string()
-    })
-})
+
 
 const authors = defineCollection({
     loader: file("src/content/authors/authors.json"),
@@ -38,6 +32,14 @@ const authors = defineCollection({
         website: z.string(),
         profile_image: z.string(),
 
+    })
+})
+
+const tags = defineCollection({
+    loader: file("src/content/tags/tags.json"),
+    schema: z.object({
+        name: z.string(),
+        slug: z.string()
     })
 })
 
