@@ -7,16 +7,16 @@ interface props {
 
 const title = Astro.props.title || "Astro";
 ---
-<html lang="en">
+<html lang="de-ch">
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/Custom_Favicon.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
   <ClientRouter></ClientRouter>
 
 </head>
-<div class='font-blogfont'>
+<div class='font-blogfont bg-base-200'>
   <slot />
 </div>

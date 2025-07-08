@@ -1,0 +1,22 @@
+---
+import {getEntry} from "astro:content";
+interface tagProps {
+    tag: {
+        slug: string;
+        name: string;
+    };
+}
+
+
+const tag = Astro.props.tag as tagProps;
+const tagdata = await getEntry("tags", tag);
+console.log(tag)
+---
+<div>
+    <div class="flex flex-wrap gap-4">
+        <a href={`/tag/${tagdata.id}`} class="bg-accent text-xs hover:brightness-110 mr-2 transition duration-150 font-semibold hover:underline text-base-content px-3 py-2 rounded-full ">
+            {tagdata.data.name}
+        </a>
+
+    </div>
+</div>

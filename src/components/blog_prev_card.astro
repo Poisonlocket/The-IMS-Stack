@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import { getAuthorSlugSingle } from "../util/get_author_slug";
+import Author_post_preview from "./author_post_preview.astro";
+
+interface props {
+    id: string
+    title: string
+    description: string
+    image_path: string
+    read_time: number
+    authors: string[]
+    width: string
+}
+
+const { id, title, description, image_path, read_time, authors, width = "w-96" } = Astro.props as props;
+
+---
+
+<div class={`card bg-base-100 border-accent/35 border-solid border-1 ${width} shadow-sm sm:w-full md:w-80 lg:w-96`}>
+    <figure>
+        <Image
+                width="10"
+                height="250"
+                format="webp"
+                fit="cover"
+                quality={80}
+                aspectRatio="16:9"
+                class="max-h-48 w-full object-center sm:max-h-40 md:max-h-48"
+                src={image_path}
+                alt={title} />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title text-lg sm:text-base md:text-lg">{title}</h2>
+        <div class="flex flex-wrap items-center mt-2 text-sm text-secondary">
+            <span>Lesezeit: {read_time} Minuten -</span>
+            <div class="ml-2 flex  flex-wrap">
+                {authors.map(author => (
+                        <Author_post_preview id={getAuthorSlugSingle(author)} />
+                ))}
+            </div>
+        </div>
+        <p class="text-sm sm:text-xs md:text-sm">{description}</p>
+        <div class="card-actions justify-end">
+            <button class="btn btn-primary mt-1 text-sm sm:text-xs md:text-sm">
+                <a href={`/post/${id}`}>Jetzt reinlesen</a>
+            </button>
+        </div>
+    </div>
+</div>

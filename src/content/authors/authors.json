@@ -3,26 +3,26 @@
     "slug": "lorenzo-bonometti",
     "name": "Lorenzo Bonometti",
     "username": "Poisonlocket",
-    "description": "Code, Koffein, Entli und Successful CI runs sind s'wahre Glück im Lebe",
-    "articles": [
-
+    "description": "Code, Koffein, Entli und Successful CI runs sind s'wahre Glück im Lebe. I minere Freiziit programmiere ich unter anderem gern Go und Typescript, aber au viel Python. Ich bin immer ah öppis dranne und am ume tüftle, mängisch gibi au mini Meinig zu Themene uf dem Blog ab.",
+    "posts": [
+      "ai-in-design"
     ],
     "tags": ["golang", "webdev", "opensource", "python", "homelabbing", "devops", "typescript", "linux"],
     "github": "https://github.com/Poisonlocket",
     "website": "https://bonomettil.dev",
-    "profile_image": "../../images/authors/lorenzo-bonometti.jpg"
+    "profile_image": "/src/assets/author_images/author_image_lorenzo_bonometti.jpg"
   },
   {
     "slug": "victor-pesci",
     "name": "Victor Pesci",
     "username": "omen",
     "description": "i like it when the iron does the oxidation",
-    "articles": [
+    "posts": [
 
     ],
     "tags": ["javascript", "rust", "opensource",  "python",  "webdevelopment",  "IMS", "Lehrpersone", "rant",  "BZZ", "bevy"],
     "github": "https://github.com/old0men",
     "website": "https://ims-portfolio-vast.vercel.app/",
-    "profile_image": "../../images/authors/victor-pesci.jpg"
+    "profile_image": "/src/assets/author_images/author_image_victor_pesci.png"
   }
 ]
