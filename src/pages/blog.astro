@@ -3,7 +3,7 @@ import "../assets/app.css";
 import { getCollection } from "astro:content";
 import Landing_nav from "../components/landing_nav.astro";
 import Root_layout from "../layouts/root_layout.astro";
-import Blog_prev_card from "../components/Blog_prev_card.astro";
+import Blog_prev_card from "../components/blog_prev_card.astro";
 
 // Fetch all blog posts and sort them by date (newest first)
 const posts = await getCollection('posts');
